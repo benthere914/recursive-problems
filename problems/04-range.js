@@ -11,12 +11,15 @@ range(7, 6); // []
 ***********************************************************************/
 
 
-range = (start, num) => {
-  let arr = [];
+range = (start, num, arr = []) => {
+  debugger;
   if (start > num) return arr;
-  if (num - 1 === start) arr.push(start)
-  arr.push(start);
-  return range (start + 1, num)
+  arr.push(start)
+  debugger;
+  if (start + 1 < num) {
+    range(start + 1, num, arr)
+  }
+  return arr;
 }
 
 console.log(range(1, 5)); // [1, 2, 3, 4]
