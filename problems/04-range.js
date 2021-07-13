@@ -11,8 +11,15 @@ range(7, 6); // []
 ***********************************************************************/
 
 
-// your code here
+range = (start, num) => {
+  let arr = [];
+  if (start > num) return arr;
+  if (num - 1 === start) arr.push(start)
+  arr.push(start);
+  return range (start + 1, num)
+}
 
+console.log(range(1, 5)); // [1, 2, 3, 4]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
