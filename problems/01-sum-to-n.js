@@ -12,21 +12,26 @@ sumToN(-8)  // returns null
 ***********************************************************************/
 
 const sumToN = num => {
+  debugger;
   if (num < 0){
     return null;
   }
-  let sum = 0;
-  for (let i = 0; i <= num; i++){
-    let nums = i;
-    sum += nums;
+
+  if (num === 1) {
+    debugger;
+    return num;
+  } else {
+    debugger;
+    return num + sumToN(num - 1)
+                // ^^ nested number (all numbers within that number)
   }
-  return sum;
 };
 
 
 console.log(sumToN(5)) // returns 15
-
-
+sumToN(1); // returns 1
+sumToN(2) // returns 1 + nestedNumber
+console.log(sumToN(3)) // returns 3 + nestedNumber
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumToN;
