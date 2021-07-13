@@ -11,7 +11,21 @@ sumToN(9)  // returns 45
 sumToN(-8)  // returns null
 ***********************************************************************/
 
-// your code here
+const sumToN = num => {
+  if (num < 0){
+    return null;
+  }
+  let sum = 0;
+  for (let i = 0; i <= num; i++){
+    let nums = i;
+    sum += nums;
+  }
+  return sum;
+};
+
+
+console.log(sumToN(5)) // returns 15
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
