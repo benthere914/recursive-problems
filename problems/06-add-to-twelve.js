@@ -12,7 +12,25 @@ addToTwelve([1, 12, 4, 7, 6]); // false
 addToTwelve([1]); // false
 ***********************************************************************/
 
-// your code here
+function addToTwelve(array){
+  if (array.length === 1) return false;
+  let firstEl = array.splice(0, 1);
+  // console.log(firstEl)
+  if (firstEl + array[0] === 12) return true;
+  else {
+    addToTwelve()
+  }
+  return false;
+}
+
+
+
+
+console.log(addToTwelve([1, 3, 4, 7, 5])); // true
+console.log(addToTwelve([1, 3, 4, 7, 6])); // false
+console.log(addToTwelve([1, 11, 4, 7, 6])); // true
+console.log(addToTwelve([1, 12, 4, 7, 6])); // false
+console.log(addToTwelve([1])); // false
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

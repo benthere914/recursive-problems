@@ -11,9 +11,22 @@ reverse("q"); // "q"
 reverse("id"); // "di"
 reverse(""); // ""
 ***********************************************************************/
+function reverse(str){
+  if (str.length <= 1){
+    return str;
+  }
+  let lastLetter = str[str.length -1]
+  let restOfWord = str.slice(0, str.length - 1)
+  let reversed = reverse(restOfWord)
+  return lastLetter + reversed;
+}
 
-// your code here
-
+console.log(reverse("house")); // "esuoh"
+console.log(reverse("dog")); // "god"
+console.log(reverse("atom")); // "mota"
+console.log(reverse("q")); // "q"
+console.log(reverse("id")); // "di"
+console.log(reverse("")); // ""
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = reverse;
