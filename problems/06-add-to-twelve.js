@@ -13,14 +13,15 @@ addToTwelve([1]); // false
 ***********************************************************************/
 
 function addToTwelve(array){
+  debugger;
   if (array.length === 1) return false;
-  let firstEl = array.splice(0, 1);
-  // console.log(firstEl)
-  if (firstEl + array[0] === 12) return true;
+
+  let secondOne = array[1];
+  let firstOne = array.shift();
+  if (firstOne + secondOne === 12) return true;
   else {
-    addToTwelve()
+    return addToTwelve(array);
   }
-  return false;
 }
 
 
