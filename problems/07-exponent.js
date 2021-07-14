@@ -22,12 +22,12 @@ exponent(5, 5); // 3125
 
 function exponent(b, n) {
   debugger;
-  if (n === 2) return b * b
-  if (n > 2) {
+  if (n === 1) return b
+  if (n > 1) {
     return b * exponent(b, n - 1)
   }
   if (n < 0) {
-    return (b, n + 1) / (-b * b);
+    return 1 /( b * exponent(b, -n - 1))
   }
 }
 
