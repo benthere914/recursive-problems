@@ -26,8 +26,9 @@ function exponent(b, n) {
   if (n > 2) {
     return b * exponent(b, n - 1)
   }
-  if (n < 0) return (b, n + 1) / (-b * b);
-  // return exponent(b, n - 1)
+  if (n < 0) {
+    return (b, n + 1) / (-b * b);
+  }
 }
 
 console.log(exponent(3, 2)); // 9
