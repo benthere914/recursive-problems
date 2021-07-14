@@ -10,8 +10,16 @@ flatten([1, 2]); // [1, 2]
 flatten([1, [2, [3]]]); // [1, 2, 3]
 ***********************************************************************/
 
-// your code here
-  
+flatten = array => {
+let res = [];
+for (let i = 0; i < array.length; i++){
+  let subArray = array[i];
+  if (subArray.length === 0) return [];
+}
+}
+
+flatten([1,2])
+flatten([[1], [2]])
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = flatten;

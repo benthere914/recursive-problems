@@ -16,16 +16,13 @@ factorial(3); // 6
 factorial(5); // 120
 ***********************************************************************/
 
-let factorial = (num, factoid = [1]) => {
+let factorial = (num) => {
 
-  if (num > factoid.length) {
-    factoid = factorial(num -1, factoid)
+  if (num === 1) {
+    return 1
   }
+  if (num > 1) return num * factorial(num - 1);
 
-  factoid.push(num * factoid[num -1]);
-  if (factoid.length)
-
-  return factoid;
 }
 
 console.log(factorial(3)); // 6
